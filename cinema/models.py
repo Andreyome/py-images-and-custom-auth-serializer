@@ -46,6 +46,7 @@ def create_custom_path(instance, filename):
         f"{slugify(instance.title)}-{uuid.uuid4()}{extension}"
     )
 
+
 class Movie(models.Model):
     image = models.ImageField(null=True, upload_to=create_custom_path)
     title = models.CharField(max_length=255)
